@@ -1,0 +1,12 @@
+#!/bin/zsh
+SOURCES=$PREFIX/source
+mkdir -p $SOURCES
+
+sudo apt-get update
+sudo apt-get install -y xserver-xorg startx libx11-dev dmenu
+
+for project in "dwm" "st"
+do
+	git clone --branch kemitchell "git@github.com:kemitchell/$project" "$SOURCES/$project"
+	( cd $SOURCES/$project && cmi)
+done
