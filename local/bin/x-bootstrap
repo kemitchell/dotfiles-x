@@ -2,11 +2,12 @@
 SOURCES=$PREFIX/source
 mkdir -p $SOURCES
 
+fgrep dl.google.com /etc/apt/sources.list || sudo bash -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
 sudo apt-get update
 sudo apt-get install -y xserver-xorg startx libx11-dev dmenu
 
 for project in "dwm" "st"
 do
-	git clone --branch kemitchell "git@github.com:kemitchell/$project" "$SOURCES/$project"
+	git clone "git@github.com:kemitchell/$project" "$SOURCES/$project"
 	( cd $SOURCES/$project && cmi)
 done
