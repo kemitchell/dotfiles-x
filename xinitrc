@@ -1,3 +1,4 @@
+#!/bin/zsh
 # https://blog.dbrgn.ch/2012/1/19/dwm-config-volume-battery-notification-unread-e-mail-count-more/
 export EDITOR=vim
 export BROWSER=google-chrome
@@ -23,4 +24,4 @@ do
 	sleep 10s
 done &
 
-exec $HOME/local/bin/dwm
+exec dwm
