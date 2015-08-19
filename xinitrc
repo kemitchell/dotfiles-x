@@ -24,4 +24,7 @@ do
 	sleep 10s
 done &
 
+xscreensaver &
+google-chrome --no-startup-window &
+
 exec dwm
