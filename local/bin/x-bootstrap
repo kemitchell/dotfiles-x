@@ -4,7 +4,7 @@ mkdir -p $SOURCES
 
 fgrep dl.google.com /etc/apt/sources.list || sudo bash -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
 sudo apt-get update
-sudo apt-get install -y xserver-xorg startx libx11-dev dmenu
+sudo apt-get install -y xserver-xorg startx libx11-dev dmenu xscreensaver
 
 for project in "dwm" "st"
 do
