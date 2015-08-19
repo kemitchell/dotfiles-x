@@ -19,6 +19,7 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	libxft-dev
 	libxinerama-dev
 	mupdf
+	rdesktop
 	xinit
 	xscreensaver
 	xserver-xorg
