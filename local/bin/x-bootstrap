@@ -5,13 +5,29 @@ mkdir -p $SOURCES
 
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 fgrep dl.google.com /etc/apt/sources.list || sudo bash -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
+
 sudo apt-get update
-sudo apt-get install -y build-essential google-chrome-stable xserver-xorg libx11-dev libxft-dev libxinerama-dev dmenu xscreensaver xinit fonts-droid
+cat <<PACKAGES | xargs sudo apt-get install -y
+	abiword
+	build-essential
+	dmenu
+	fonts-droid
+	gimp
+	google-chrome-stable
+	libreoffice
+	libx11-dev
+	libxft-dev
+	libxinerama-dev
+	mupdf
+	xinit
+	xscreensaver
+	xserver-xorg
+PACKAGES
 
 for project in "dwm" "st"
 do
 	if [ ! -d "$SOURCES/$project" ]; then
 		git clone "git@github.com:kemitchell/$project" "$SOURCES/$project"
 	fi
-	( cd $SOURCES/$project && git reset --hard && git pull origin && cmi)
+	( cd "$SOURCES/$project" && git reset --hard && git pull && cmi)
 done
