@@ -31,5 +31,5 @@ do
 	if [ ! -d "$SOURCES/$project" ]; then
 		git clone "git@github.com:kemitchell/$project" "$SOURCES/$project"
 	fi
-	( cd "$SOURCES/$project" && git reset --hard && git pull && cmi)
+	( cd "$SOURCES/$project" && git reset --hard && git pull && cmi )
 done
