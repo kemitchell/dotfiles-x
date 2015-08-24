@@ -5,13 +5,17 @@ mkdir -p $SOURCES
 
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 fgrep dl.google.com /etc/apt/sources.list || sudo bash -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list"
+fgrep multimedia /etc/apt/sources.list || sudo bash -c "echo 'deb http://www.deb-multimedia.org jessie main non-free' >> /etc/apt/sources.list"
 
+sudo apt-get update
+sudo apt-get install --force-yes -y deb-multimedia-keyring
 sudo apt-get update
 cat <<PACKAGES | xargs sudo apt-get install -y
 	abiword
 	build-essential
 	dmenu
 	fonts-droid
+	ffmpeg
 	gimp
 	google-chrome-stable
 	inkscape
@@ -22,6 +26,7 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	ttf-mscorefonts-installer
 	mupdf
 	rdesktop
+	vlc
 	xinit
 	xscreensaver
 	xserver-xorg
