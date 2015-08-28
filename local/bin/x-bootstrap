@@ -29,6 +29,7 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	rdesktop
 	vlc
 	xinit
+	xclip
 	xscreensaver
 	xserver-xorg
 PACKAGES
