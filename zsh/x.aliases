@@ -1,3 +1,4 @@
 function x() {
 	startx
 }
+alias chrome="google-chrome"
