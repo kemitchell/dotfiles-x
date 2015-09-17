@@ -1,0 +1,2 @@
+#!/bin/zsh
+rdesktop -u "$WINDOWS_USER" -p "$WINDOWS_PASSWORD" windows.kemitchell.com -g 1920x1060 -z $@
