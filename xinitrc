@@ -25,7 +25,6 @@ do
 done &
 
 xscreensaver &
-google-chrome --no-startup-window &
 numlockx &
 
 exec dwm
