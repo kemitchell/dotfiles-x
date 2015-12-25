@@ -24,7 +24,7 @@ do
 	sleep 10s
 done &
 
-xscreensaver &
+# xscreensaver &
 numlockx &
 
 exec dwm
