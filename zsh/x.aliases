@@ -2,3 +2,5 @@ function x() {
 	startx
 }
 alias chrome="google-chrome"
+
+alias www=x-www-browser
