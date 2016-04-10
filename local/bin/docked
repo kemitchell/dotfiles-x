@@ -1,3 +1,8 @@
 #!/bin/bash
 #xrandr --output HDMI3 --mode 1920x1080 --left-of DP2 --output DP2 --mode 1920x1080
 xrandr --output DP2 --mode 1920x1080 --primary --output LVDS1 --off
+echo > $HOME/.asoundrc <<CONFIG
+defaults.ctl.card 1
+defaults.pcm.card 1
+defaults.timer.card 1
+CONFIG
