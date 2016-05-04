@@ -1,1 +1,1 @@
-google-chrome --profile-directory=Default
+chromium --profile-directory=Default

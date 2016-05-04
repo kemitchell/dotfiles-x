@@ -1,2 +1,0 @@
-#!/bin/zsh
-rdesktop -u "$WINDOWS_USER" -p "$WINDOWS_PASSWORD" windows.kemitchell.com -g 1600x880 -r clipboard:PRIMARYCLIPBOARD -z $@
