@@ -1,0 +1,10 @@
+#!/bin/zsh
+WIDTH=$(xrandr | grep '*' | awk '{ print $1 }' | awk -F x '{ print $1 }')
+
+if [ "$WIDTH" -gt "1900" ]; then
+  DIMEN="1920x1055"
+else
+  DIMEN="1600x875"
+fi
+
+rdesktop -u "$WINDOWS_USER" -p "$WINDOWS_PASSWORD" windows.kemitchell.com -g "$DIMEN" -r clipboard:PRIMARYCLIPBOARD -z $@
