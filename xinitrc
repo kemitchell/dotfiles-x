@@ -3,7 +3,7 @@
 export EDITOR=vim
 export BROWSER=google-chrome
 
-setxkbmap -option ctrl:nocaps
+setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"
 
 while true
 do

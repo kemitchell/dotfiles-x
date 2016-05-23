@@ -1,7 +1,8 @@
 Section "InputClass"
 	Identifier "Keyboard Setting"
+  Option "XkbLayout" "us,ru"
 	MatchIsKeyboard "yes"
-	Option "XkbOptions" "ctl:nocaps"
+	Option "XkbOptions" "ctl:nocaps,grp:shifts_toggle"
 EndSection
 
 Section "InputClass"
