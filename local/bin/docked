@@ -5,3 +5,5 @@ defaults.ctl.card 1
 defaults.pcm.card 1
 defaults.timer.card 1
 CONFIG
+sudo ifconfig wlan0 down
+sudo dhclient eth0
