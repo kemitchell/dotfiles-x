@@ -1,0 +1,27 @@
+#!/bin/bash
+
+DATE=$(date --iso-8601=minutes)
+FILE="$HOME/$DATE.ogv"
+
+DELAY=5
+
+echo "Click a window to record."
+XWININFO=$(xwininfo)
+read X < <(awk -F: '/Absolute upper-left X/{print $2}' <<< "$XWININFO")
+read Y < <(awk -F: '/Absolute upper-left Y/{print $2}' <<< "$XWININFO")
+read WIDTH < <(awk -F: '/Width/{print $2}' <<< "$XWININFO")
+read HEIGHT < <(awk -F: '/Height/{print $2}' <<< "$XWININFO")
+
+echo "Sleeping $DELAY"
+sleep "$DELAY"
+beep
+recordmydesktop \
+  -x "$X" \
+  -y "$Y" \
+  --width "$WIDTH" \
+  --height "$HEIGHT" \
+  --channels 1 \
+  --device hw:1,0 \
+  --full-shots \
+  --fps 15 \
+  -o "$FILE"
