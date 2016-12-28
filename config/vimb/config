@@ -2,7 +2,9 @@ set hintkeys=sdfjkl
 
 set history-max-items=30000
 set download-path=~/downloads/
-set homepage=about:blank
+set home-page=about:blank
+set accelerated-compositing
+set auto-shrink-images
 
 nnoremap H <C-O>
 nnoremap L <C-I>
