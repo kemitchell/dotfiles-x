@@ -1,6 +1,8 @@
 set hintkeys=sdfjkl
 
 set history-max-items=30000
+set download-path=~/downloads/
+set homepage=about:blank
 
 nnoremap H <C-O>
 nnoremap L <C-I>
