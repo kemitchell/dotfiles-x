@@ -9,6 +9,9 @@ set auto-shrink-images
 nnoremap H <C-O>
 nnoremap L <C-I>
 nnoremap qq :q<CR>
+nnoremap d <C-F>
+nnoremap u <C-B>
+nnoremap <C-Q> :q<CR>
 
 set fontsize=11
 set monofontsize=11
