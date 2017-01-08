@@ -27,6 +27,8 @@ shortcut-add d=https://duckduckgo.com/html?q=$0
 shortcut-add g=https://encrypted.google.com/search?hl=en&q=$0
 shortcut-add w=https://en.wikipedia.org/wiki/Special:Search?search=$0&go=Go
 shortcut-add f=https://fastmail.com
+shortcut-add npmp=https://www.npmjs.com/package/$0
+shortcut-add npms=https://www.npmjs.com/search?q=$0
 
 aug fastmail
   au LoadCommited https://{www.}fastmail.com/* set scripts=on | set
