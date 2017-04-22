@@ -1,8 +1,4 @@
 #!/bin/bash
 xrandr --output DP2 --mode 1920x1080 --primary --output LVDS1 --off
-cat > $HOME/.asoundrc <<CONFIG
-defaults.ctl.card 1
-defaults.pcm.card 1
-defaults.timer.card 1
-CONFIG
+use-usb-dac
 use-ethernet
