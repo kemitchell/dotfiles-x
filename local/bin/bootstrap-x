@@ -12,11 +12,10 @@ sudo apt-get install --force-yes -y deb-multimedia-keyring
 sudo apt-get update
 cat <<PACKAGES | xargs sudo apt-get install -y
 	abiword
-  beep
 	build-essential
 	dmenu
-	fonts-droid
 	ffmpeg
+	fonts-droid
 	gimp
 	google-chrome-stable
 	inkscape
@@ -24,14 +23,16 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	libx11-dev
 	libxft-dev
 	libxinerama-dev
-	numlockx
-	ttf-mscorefonts-installer
 	mupdf
+	numlockx
 	rdesktop
+	ttf-mscorefonts-installer
 	vlc
+	xclip
 	xinit
 	xinput
-	xclip
 	xscreensaver
 	xserver-xorg
+  beep
+  zathura
 PACKAGES
