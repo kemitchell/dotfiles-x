@@ -12,8 +12,10 @@ sudo apt-get install --force-yes -y deb-multimedia-keyring
 sudo apt-get update
 cat <<PACKAGES | xargs sudo apt-get install -y
 	abiword
+  beep
 	build-essential
 	dmenu
+  feh
 	ffmpeg
 	fonts-droid
 	gimp
@@ -33,6 +35,5 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	xinput
 	xscreensaver
 	xserver-xorg
-  beep
   zathura
 PACKAGES
