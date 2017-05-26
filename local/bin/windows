@@ -7,4 +7,4 @@ else
   DIMEN="1600x875"
 fi
 
-rdesktop -x 80 -u "$1" -p "$2" windows.kemitchell.com -g "$DIMEN" -r clipboard:PRIMARYCLIPBOARD -z
+rdesktop -K -x 80 -u "$1" -p "$2" windows.kemitchell.com -g "$DIMEN" -r clipboard:PRIMARYCLIPBOARD -z
