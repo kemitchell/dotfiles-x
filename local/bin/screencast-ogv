@@ -21,7 +21,7 @@ recordmydesktop \
   --width "$WIDTH" \
   --height "$HEIGHT" \
   --channels 1 \
-  --device hw:1,0 \
+  --device hw:0,0 \
   --full-shots \
   --fps 15 \
   -o "$FILE"
