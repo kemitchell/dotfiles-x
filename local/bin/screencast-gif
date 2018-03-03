@@ -3,8 +3,13 @@
 DATE=$(date --iso-8601=minutes)
 FILE="$HOME/$DATE.gif"
 
-DELAY=5
-DURATION=10
+if [[ -z "$1" || -z "$2" ]]; then
+  echo "Usage: <delay> <duration>"
+  exit 1
+fi
+
+DELAY="$1"
+DURATION="$2"
 XWININFO=$(xwininfo)
 
 read X < <(awk -F: '/Absolute upper-left X/{print $2}' <<< "$XWININFO")
@@ -12,7 +17,7 @@ read Y < <(awk -F: '/Absolute upper-left Y/{print $2}' <<< "$XWININFO")
 read WIDTH < <(awk -F: '/Width/{print $2}' <<< "$XWININFO")
 read HEIGHT < <(awk -F: '/Height/{print $2}' <<< "$XWININFO")
 
-#sleep "$DELAY"
+sleep "$DELAY"
 beep
 byzanz-record -c --verbose --delay=0 --duration="$DURATION" --x="$X" --y="$Y" --width="$WIDTH" --height="$HEIGHT" "$FILE"
 beep
