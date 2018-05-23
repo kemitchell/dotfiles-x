@@ -1,5 +1,5 @@
 #!/bin/bash
-DATETIME=$(date --iso-8601=minutes | sed 's!T! !' | sed -r 's/-[0-9]{4}$//')
+DATETIME=$(date --iso-8601=minutes | sed 's!T! !' | sed -r 's/-[0-9]{2}:[0-9]{2}$//')
 BATTERYSTATE=$(battery-summary)
 if [ -z "$BATTERYSTATE" ]; then
   xsetroot -name "${DATETIME}"

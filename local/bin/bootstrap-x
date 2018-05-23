@@ -19,7 +19,7 @@ cat <<PACKAGES | xargs sudo apt-get install -y
 	dmenu
   feh
 	ffmpeg
-	fonts-droid
+	fonts-noto
 	gimp
 	google-chrome-stable
 	inkscape
