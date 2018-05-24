@@ -1,0 +1,31 @@
+sudo apt-get update
+cat <<PACKAGES | xargs sudo apt-get install -y
+	abiword
+  acpi
+  acpitool
+  beep
+	build-essential
+	dmenu
+  feh
+	fonts-noto
+	fonts-symbola
+	gimp
+	google-chrome-stable
+	inkscape
+	libreoffice
+	libx11-dev
+	libxft-dev
+	libxinerama-dev
+	mupdf
+	numlockx
+	rdesktop
+	ttf-mscorefonts-installer
+	xclip
+	xinit
+	xinput
+	xscreensaver
+	xserver-xorg
+  ffmpeg
+  vlc
+  zathura
+PACKAGES
