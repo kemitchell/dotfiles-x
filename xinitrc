@@ -4,6 +4,7 @@ export EDITOR=vim
 export BROWSER=google-chrome
 
 setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"
+pulseaudio --start
 
 while true
 do
