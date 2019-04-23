@@ -1,4 +1,4 @@
 #!/bin/bash
 xrandr --output DP2 --mode 1920x1080 --primary --output LVDS1 --off
-use-usb-dac
-use-ethernet
+useusbdac
+useethernet
