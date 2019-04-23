@@ -8,7 +8,7 @@ pulseaudio --start
 
 while true
 do
-	x-set-dwm-title
+	xsetdwmtitle
 	sleep 10s
 done &
 
