@@ -1,0 +1,3 @@
+#!/bin/sh
+google-chrome --profikle Personal &
+google-chrome --profikle Work &
