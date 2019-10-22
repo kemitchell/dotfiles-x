@@ -5,3 +5,5 @@ function x() {
 alias chrome="google-chrome"
 
 alias www=x-www-browser
+
+alias readpdf="spawn zathura"
