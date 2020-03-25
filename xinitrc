@@ -7,7 +7,7 @@ setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"
 
 while true; do
 	xsetdwmtitle
-	sleep 10s
+	sleep 5s
 done &
 
 numlockx &
