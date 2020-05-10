@@ -3,4 +3,4 @@ if [ -z "$(pgrep xscreensaver)" ]; then
   ( xscreensaver -no-splash ) &
   sleep 1s
 fi
-xscreensaver-command -lock -select 1
+xscreensaver-command -lock
