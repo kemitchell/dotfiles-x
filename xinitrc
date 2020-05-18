@@ -11,6 +11,6 @@ while true; do
 done &
 
 numlockx &
-xscreensaver &
+xscreensaver -no-splash &
 
 exec dwm
