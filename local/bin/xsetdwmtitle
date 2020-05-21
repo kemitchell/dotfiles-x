@@ -6,5 +6,5 @@ BATTERYSTATE=$(batterysummary)
 if [ -z "$BATTERYSTATE" ]; then
   xsetroot -name "${NZ} | ${NY} | ${DATETIME}"
 else
-  xsetroot -name "${BATTERYSTATE} | ${NZ} | ${NY} | ${DATETIME}"
+  xsetroot -name " ${BATTERYSTATE} | ${NZ} | ${NY} | ${DATETIME}"
 fi
