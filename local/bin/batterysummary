@@ -5,10 +5,12 @@ var re = /(\d+)%/
 process.stdout.write(
   readout
     .split(require('os').EOL)
-    .reduce(function(percentages, line) {
+    .reduce(function (percentages, line) {
       var match = re.exec(line)
       if (match) {
-        percentages.push(match[1] + '%') }
+        percentages.push(match[1] + '%')
+      }
       return percentages
     }, [])
-    .join(', '))
+    .join(', ')
+)
