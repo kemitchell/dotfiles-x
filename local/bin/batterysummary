@@ -1,16 +1,32 @@
 #!/usr/bin/env node
-var exec = require('child_process').execSync
-var readout = exec('acpi -b').toString()
-var re = /(\d+)%/
-process.stdout.write(
-  readout
-    .split(require('os').EOL)
-    .reduce(function (percentages, line) {
-      var match = re.exec(line)
-      if (match) {
-        percentages.push(match[1] + '%')
-      }
-      return percentages
-    }, [])
-    .join(', ')
-)
+var spawn = require('child_process').spawn
+
+var acpi = spawn('acpi', ['-b'])
+
+const chunks = []
+acpi.stdout
+  .on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+  .once('error', function (error) {
+    console.error(error)
+    process.exit(1)
+  })
+
+acpi.once('close', function (code) {
+  if (code !== 0) process.exit(code)
+  var re = /(\d+)%/
+  var output = Buffer.concat(chunks).toString()
+  process.stdout.write(
+    output
+      .split(require('os').EOL)
+      .reduce(function (percentages, line) {
+        var match = re.exec(line)
+        if (match) {
+          percentages.push(match[1] + '%')
+        }
+        return percentages
+      }, [])
+      .join(', ')
+  )
+})
