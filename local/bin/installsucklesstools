@@ -2,7 +2,7 @@
 SOURCES="$PREFIX/source"
 sudo apt-get update
 sudo apt-get install libxft-dev libxinerama-dev
-for project in "dwm" "st" "dmenu"
+for project in "dwm" "st" "dmenu" "scroll"
 do
 	if [ ! -d "$SOURCES/$project" ]; then
 		git clone "git@github.com:kemitchell/$project" "$SOURCES/$project"
