@@ -6,6 +6,7 @@ cat <<PACKAGES | xargs sudo apt-get install -y
   beep
 	build-essential
 	dmenu
+  notify-osd
   feh
 	fonts-noto
 	fonts-symbola
