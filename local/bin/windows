@@ -7,4 +7,5 @@ else
   DIMEN="1600x875"
 fi
 
-rdesktop -K -x 80 -u "$1" -p "$2" ${WINDOWS_HOSTNAME:-kemitchell.ddns.net} -g "$DIMEN" -r clipboard:PRIMARYCLIPBOARD -z
+#rdesktop -a 8 -K -x 80 -u "$1" -p "$2" ${WINDOWS_HOSTNAME:-kemitchell.ddns.net} -g "$DIMEN" -r clipboard:PRIMARYCLIPBOARD
+xfreerdp /u:$1 /p:$2 /v:${WINDOWS_HOSTNAME:-kemitchell.ddns.net} /size:$DIMEN
