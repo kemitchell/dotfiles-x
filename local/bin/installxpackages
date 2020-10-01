@@ -31,4 +31,5 @@ cat <<PACKAGES | xargs sudo apt-get install -y
   freerdp2-x11
   vlc
   zathura
+  kitty
 PACKAGES
