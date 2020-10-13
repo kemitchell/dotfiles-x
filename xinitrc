@@ -12,5 +12,6 @@ done &
 
 numlockx &
 xscreensaver -no-splash &
+display1080
 
 exec dwm
