@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+tmp=$(mktemp)
+cleanup() {
+  rm "$tmp"
+}
+trap cleanup EXIT
+
+if [ -n "$2" ]; then
+  cat <<EOS
+Edit the contents of X clipboards.
+
+Usage: $(basename "$0") [clipboard|primary|secondary]
+EOS
+  exit 1
+fi
+
+selection="${1-clipboard}"
+xclip -o -selection "$selection" > "$tmp"
+${VISUAL-${EDITOR-vim}} "$tmp"
+xclip -i -selection "$selection" < "$tmp"
