@@ -1,14 +1,12 @@
 #!/bin/bash
 # https://blog.dbrgn.ch/2012/1/19/dwm-config-volume-battery-notification-unread-e-mail-count-more/
-export BROWSER=google-chrome
-
-setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"
-
 while true; do
 	xsetdwmtitle
 	sleep 5s
 done &
 
+export BROWSER=google-chrome
+setupkeyboard &
 numlockx &
 xscreensaver -no-splash &
 display1080
