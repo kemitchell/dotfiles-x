@@ -1,0 +1,5 @@
+#!/bin/bash
+while compgen -G "$HOME/downloads/*.crdownload"; do
+  sleep 1s
+done
+exit 0
