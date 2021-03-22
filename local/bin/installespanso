@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+tmp=$(mktemp -d)
+cleanup () {
+  rm -f "$tmp"
+}
+trap cleanup EXIT
+cd "$tmp"
+wget https://github.com/federico-terzi/espanso/releases/latest/download/espanso-debian-amd64.deb
+sudo dpkg -i ./espanso*.deb
+espanso start
