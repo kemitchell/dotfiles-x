@@ -16,9 +16,33 @@ matches:
     replace: "{{mydate}}"
     vars:
       - name: mydate
-        type: date
+        type: shell
         params:
-          format: "%Y-%m-%d"
+          cmd: ~/.local/bin/today
+
+  - trigger: ":tomorrow"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: shell
+        params:
+          cmd: ~/.local/bin/tomorrow
+
+  - trigger: ":monday"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: shell
+        params:
+          cmd: ~/.local/bin/nextmonday
+
+  # Symbols
+  - {trigger: ":section", replace: "§"}
+  - {trigger: ":paragraph", replace: "¶"}
+  - {trigger: ":pilcrow", replace: "¶"}
+  - {trigger: ":-m", replace: "—"}
+  - {trigger: ":-n", replace: "–"}
+  - {trigger: ":...", replace: "…"}
 
   # Shell commands
   #- trigger: ":shell"
