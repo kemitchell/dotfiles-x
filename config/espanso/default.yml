@@ -36,6 +36,14 @@ matches:
         params:
           cmd: ~/.local/bin/nextmonday
 
+  - trigger: ":friday"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: shell
+        params:
+          cmd: ~/.local/bin/friday
+
   # Symbols
   - {trigger: ":section", replace: "§"}
   - {trigger: ":paragraph", replace: "¶"}
@@ -43,12 +51,3 @@ matches:
   - {trigger: ":-m", replace: "—"}
   - {trigger: ":-n", replace: "–"}
   - {trigger: ":...", replace: "…"}
-
-  # Shell commands
-  #- trigger: ":shell"
-  #  replace: "{{output}}"
-  #  vars:
-  #    - name: output
-  #      type: shell
-  #      params:
-  #        cmd: "echo Hello from your shell"
