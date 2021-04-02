@@ -6,9 +6,9 @@ while true; do
 done &
 
 export BROWSER=google-chrome
-setupkeyboard &
-numlockx &
 xscreensaver -no-splash &
 display1080
+setupkeyboard
+numlockx
 
 exec dwm
