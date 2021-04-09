@@ -48,6 +48,10 @@ matches:
   - {trigger: ":section", replace: "§"}
   - {trigger: ":paragraph", replace: "¶"}
   - {trigger: ":pilcrow", replace: "¶"}
-  - {trigger: ":-m", replace: "—"}
-  - {trigger: ":-n", replace: "–"}
+  - {trigger: ":emdash", replace: "—"}
+  - {trigger: ":endash", replace: "–"}
+  - {trigger: ":lsquo", replace: "‘"}
+  - {trigger: ":rsquo", replace: "’"}
+  - {trigger: ":ldquo", replace: "“"}
+  - {trigger: ":rdquo", replace: "”"}
   - {trigger: ":...", replace: "…"}
