@@ -7,9 +7,10 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-  # Simple text replacement
-  - trigger: ":cdck"
-    replace: "Civilized Discourse Construction Kit"
+  # Simple Expansions
+  - {trigger: ":cdck", replace: "Civilized Discourse Construction Kit"}
+  - {trigger: ":kem", replace: "Kyle E. Mitchell"}
+  - {trigger: ":email", replace: "kyle@kemitchell.com"}
 
   # Dates
   - trigger: ":today"
