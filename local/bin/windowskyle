@@ -1,1 +1,1 @@
-windows "$WINDOWS_USER" "$WINDOWS_PASSWORD"
+remotedesktop "$WINDOWS_USER" "$WINDOWS_PASSWORD"
