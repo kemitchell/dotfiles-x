@@ -8,12 +8,12 @@
 # it gets replaced by the "replace" string.
 matches:
   # Simple Expansions
-  - {trigger: ":cdck", replace: "Civilized Discourse Construction Kit"}
-  - {trigger: ":kem", replace: "Kyle E. Mitchell"}
-  - {trigger: ":email", replace: "kyle@kemitchell.com"}
+  - {trigger: ";cdck", replace: "Civilized Discourse Construction Kit"}
+  - {trigger: ";kem", replace: "Kyle E. Mitchell"}
+  - {trigger: ";email", replace: "kyle@kemitchell.com"}
 
   # Dates
-  - trigger: ":today"
+  - trigger: ";today"
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -21,7 +21,7 @@ matches:
         params:
           cmd: ~/.local/bin/today
 
-  - trigger: ":tomorrow"
+  - trigger: ";tomorrow"
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -29,7 +29,7 @@ matches:
         params:
           cmd: ~/.local/bin/tomorrow
 
-  - trigger: ":monday"
+  - trigger: ";monday"
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -37,7 +37,7 @@ matches:
         params:
           cmd: ~/.local/bin/nextmonday
 
-  - trigger: ":friday"
+  - trigger: ";friday"
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -46,13 +46,13 @@ matches:
           cmd: ~/.local/bin/friday
 
   # Symbols
-  - {trigger: ":section", replace: "§"}
-  - {trigger: ":paragraph", replace: "¶"}
-  - {trigger: ":pilcrow", replace: "¶"}
-  - {trigger: ":emdash", replace: "—"}
-  - {trigger: ":endash", replace: "–"}
-  - {trigger: ":lsquo", replace: "‘"}
-  - {trigger: ":rsquo", replace: "’"}
-  - {trigger: ":ldquo", replace: "“"}
-  - {trigger: ":rdquo", replace: "”"}
-  - {trigger: ":...", replace: "…"}
+  - {trigger: ";section", replace: "§"}
+  - {trigger: ";paragraph", replace: "¶"}
+  - {trigger: ";pilcrow", replace: "¶"}
+  - {trigger: ";emdash", replace: "—"}
+  - {trigger: ";endash", replace: "–"}
+  - {trigger: ";lsquo", replace: "‘"}
+  - {trigger: ";rsquo", replace: "’"}
+  - {trigger: ";ldquo", replace: "“"}
+  - {trigger: ";rdquo", replace: "”"}
+  - {trigger: ";...", replace: "…"}
