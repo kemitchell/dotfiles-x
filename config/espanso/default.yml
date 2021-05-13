@@ -11,6 +11,10 @@ matches:
   - {trigger: ";cdck", replace: "Civilized Discourse Construction Kit"}
   - {trigger: ";kem", replace: "Kyle E. Mitchell"}
   - {trigger: ";email", replace: "kyle@kemitchell.com"}
+  - {trigger: ";shebang", replace: "#!/bin/sh"}
+  - {trigger: ";pfnc", replace: "PolyForm Noncommercial"}
+  - {trigger: ";pfft", replace: "PolyForm Free Trial"}
+  - {trigger: ";gpl", replace: "General Public License"}
 
   # Dates
   - trigger: ";today"
