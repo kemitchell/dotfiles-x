@@ -1,0 +1,5 @@
+#!/bin/sh
+BIN="$PREFIX/bin/obsidian"
+LATEST=$(getlatestgithubreleaseurl obsidianmd/obsidian-releases AppImage)
+wget "$LATEST" -O "$BIN"
+chmod +x "$BIN"
