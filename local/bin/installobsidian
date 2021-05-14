@@ -1,5 +1,5 @@
 #!/bin/sh
-BIN="$PREFIX/bin/obsidian"
+BIN="$HOME/.local/bin/obsidian"
 LATEST=$(getlatestgithubreleaseurl obsidianmd/obsidian-releases AppImage)
 wget "$LATEST" -O "$BIN"
 chmod +x "$BIN"
