@@ -1,0 +1,4 @@
+#!/bin/sh
+for pdf in ./*.pdf; do
+  zathura "$pdf"&
+done
