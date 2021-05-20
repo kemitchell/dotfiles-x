@@ -8,9 +8,9 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key ad
 
 MULTI="/etc/apt/sources.list.d/multimedia.list"
 if [ ! -f "$MULTI" ]; then
-  sudo echo 'deb http://www.deb-multimedia.org squeeze main non-free' > "$MULTI"
+  echo 'deb http://www.deb-multimedia.org buster main non-free' > sudo tee "$MULTI"
 fi
 
 sudo apt-get update
-sudo apt-get install --force-yes -y deb-multimedia-keyring
+sudo apt-get install --yes -y deb-multimedia-keyring
 installxpackages

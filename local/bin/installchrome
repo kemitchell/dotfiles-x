@@ -1,3 +1,4 @@
+#!/bin/sh
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 DEB=/etc/apt/sources.list.d./chrome.deb
 if [ ! -f "$DEB" ]; then
