@@ -14,6 +14,7 @@ matches:
   - {trigger: ";pfnc", replace: "PolyForm Noncommercial"}
   - {trigger: ";pfft", replace: "PolyForm Free Trial"}
   - {trigger: ";gpl", replace: "General Public License"}
+  - {trigger: ";kemred", replace: "Redline (KEM generated)"}
 
   # Dates
   - trigger: ";today"
@@ -31,6 +32,14 @@ matches:
         type: shell
         params:
           cmd: ~/.local/bin/tomorrow
+
+  - trigger: ";yesterday"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: shell
+        params:
+          cmd: ~/.local/bin/yesterday
 
   - trigger: ";monday"
     replace: "{{mydate}}"
