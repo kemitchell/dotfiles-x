@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+repo="$PREFIX/source/kitty"
+if ! [ -d "$repo" ]; then
+  mkdir -p "$(dirname "$repo")"
+  git clone -q https://github.com/kovidgoyal/kitty "$repo"
+  cd "$repo"
+else
+  cd "$repo"
+  git fetch origin --tags --prune-tags
+fi
+
+git checkout "$(git tag --sort=v:refname | tail -n 1)"
+sudo apt update
+sudo apt build-dep -y kitty
+make
