@@ -1,7 +1,0 @@
-#!/usr/bin/zsh
-connectedtointernet || sudo dhclient
-until connectedtointernet; do sleep 1s ; done
-dotsync & disown
-practice & disown
-google-chrome & disown
-spotify & disown
