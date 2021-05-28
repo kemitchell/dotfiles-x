@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 
-if command -v apt 2>/dev/null; then
+if command -v apt >/dev/null; then
   sudo apt install libxtst6 libxdo3 xclip libnotify-bin
-elif command -v pacman 2>/dev/null; then
+elif command -v pacma >/dev/null; then
   yes | sudo pacman -S xdo xdotool xclip libxtst libnotify
 fi
 
