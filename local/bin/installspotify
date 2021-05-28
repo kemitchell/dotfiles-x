@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+if command -v pacman >/dev/null; then
+  repo="$PREFIX/source/spotify"
+  git clone https://aur.archilinux.org/spotify "$repo"
+  cd "$repo"
+  yes | makepkg -sri
+elif command -v apt >/dev/null; then
+  curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  sudo apt update
+  sudo apt install -y spotify-client
+fi

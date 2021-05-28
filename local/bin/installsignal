@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+if command -v pacman >/dev/null; then
+  yes | sudo pacman -S signal-desktop
+elif command -v apt >/dev/null; then
+  echo "Don't know how to install signal-desktop on Debian."
+  exit 1
+fi
