@@ -1,0 +1,9 @@
+#!/bin/sh
+if command -v pacman > /dev/null; then
+  yes | sudo pacman -S zathura zathura-pdf-mupdf
+elif command -v apt > /dev/null; then
+  sudo apt install -y zathura
+else
+  echo "Could not find pacman or apt."
+  exit 1
+fi
