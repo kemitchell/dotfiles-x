@@ -2,7 +2,7 @@
 Description=espanso daemon
 
 [Service]
-ExecStart=/usr/bin/espanso daemon
+ExecStart=/home/kyle/.local/bin/espanso daemon
 Restart=on-failure
 Environment="DISPLAY=:0"
 RestartSec=3

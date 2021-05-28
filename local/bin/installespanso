@@ -16,5 +16,5 @@ trap cleanup EXIT
 cd "$tmp"
 
 curl -L https://github.com/federico-terzi/espanso/releases/latest/download/espanso-linux.tar.gz | tar -xz -C ./
-mv espanso $PREFIX/bin/espanso
+mv espanso "$PREFIX/bin/espanso"
 espanso start
