@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+repo="$PREFIX/source/dmenu"
+if [ ! -d "$repo" ]; then
+  git clone "git@github.com:kemitchell/dmenu" "$repo"
+  cd "$SOURCES/$project"
+  git remote add suckless "http://git.suckless.org/dmenu"
+fi
+
+git reset --hard
+git pull
+cmi

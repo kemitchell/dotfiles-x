@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+repo="$PREFIX/source/dwm"
+if [ ! -d "$repo" ]; then
+  git clone "git@github.com:kemitchell/dwm" "$repo"
+  cd "$SOURCES/$project"
+  git remote add suckless "http://git.suckless.org/dwm"
+fi
+
+git reset --hard
+git pull
+cmi

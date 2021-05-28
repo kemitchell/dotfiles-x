@@ -1,11 +1,20 @@
 #!/bin/sh
 set -e
+
+if command -v apt 2>/dev/null; then
+  sudo apt install libxtst6 libxdo3 xclip libnotify-bin
+elif command -v pacman 2>/dev/null; then
+  yes | sudo pacman -S xdo xdotool xclip libxtst libnotify
+fi
+
 tmp=$(mktemp -d)
 cleanup () {
   rm -rf "$tmp"
 }
 trap cleanup EXIT
+
 cd "$tmp"
-wget https://github.com/federico-terzi/espanso/releases/latest/download/espanso-debian-amd64.deb
-sudo dpkg -i ./espanso*.deb
+
+curl -L https://github.com/federico-terzi/espanso/releases/latest/download/espanso-linux.tar.gz | tar -xz -C ./
+mv espanso $PREFIX/bin/espanso
 espanso start
