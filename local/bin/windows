@@ -1,1 +1,1 @@
-remotedesktop "$WINDOWS_USER" "$WINDOWS_PASSWORD"
+remotedesktop "$(pass windows/user)" "$(pass windows/password)"

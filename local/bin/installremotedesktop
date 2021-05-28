@@ -1,0 +1,7 @@
+#!/bin/sh
+if command -v pacman ; then
+  yes | sudo pacman -S rdesktop freerdp
+else
+  echo "Don't know how to install on this system."
+  exit 1
+fi
