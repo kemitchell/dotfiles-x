@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 set -e
 SOURCES=$PREFIX/source
 mkdir -p $SOURCES

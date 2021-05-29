@@ -1,1 +1,2 @@
-tabbed -c vimb -e
+#!/bin/sh
+exec tabbed -c vimb -e

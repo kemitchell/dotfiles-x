@@ -1,33 +1,36 @@
+#!/bin/sh
+if command -v apt ; then
 sudo apt-get update
 cat <<PACKAGES | xargs sudo apt-get install -y
-	abiword
-  acpi
-  acpitool
-  beep
-	build-essential
-  notify-osd
-  libnotify-bin
-  feh
-	fonts-noto
-	fonts-symbola
-	gimp
-	inkscape
-	libreoffice
-	libx11-dev
-	libxft-dev
-	libxinerama-dev
-	mupdf
-	numlockx
-	rdesktop
-	ttf-mscorefonts-installer
-	xclip
-	xinit
-	xinput
-	xscreensaver
-	xserver-xorg
-  ffmpeg
-  freerdp2-x11
-  vlc
-  zathura
-  kitty
+abiword
+acpi
+acpitool
+beep
+build-essential
+notify-osd
+libnotify-bin
+feh
+fonts-noto
+fonts-symbola
+gimp
+inkscape
+libreoffice
+libx11-dev
+libxft-dev
+libxinerama-dev
+mupdf
+numlockx
+rdesktop
+ttf-mscorefonts-installer
+xclip
+xinit
+xinput
+xscreensaver
+xserver-xorg
+ffmpeg
+freerdp2-x11
+vlc
+zathura
+kitty
 PACKAGES
+fi

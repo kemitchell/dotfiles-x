@@ -1,2 +1,2 @@
 #!/bin/sh
-setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"
+exec setxkbmap -layout "us,ru" -option "ctrl:nocaps" -option "grp:shifts_toggle"

@@ -1,1 +1,2 @@
+#!/bin/sh
 remotedesktop "$(pass windows/user)" "$(pass windows/password)"

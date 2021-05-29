@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 if [ -z "$(pgrep xscreensaver)" ]; then
   ( xscreensaver -no-splash ) &
   sleep 1s

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 WIDTH=$(screensize | awk -F x '{ print $1 }')
 
 if [ "$WIDTH" -gt "1900" ]; then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cat <<HELP
 xwininfo to find window id
 sleep 10 ; beep ; recordmydesktop

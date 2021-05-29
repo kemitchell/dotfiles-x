@@ -3,7 +3,7 @@ set -e
 repo="$PREFIX/source/dwm"
 if [ ! -d "$repo" ]; then
   git clone "git@github.com:kemitchell/dwm" "$repo"
-  cd "$SOURCES/$project"
+  cd "$repo"
   git remote add suckless "http://git.suckless.org/dwm"
 fi
 

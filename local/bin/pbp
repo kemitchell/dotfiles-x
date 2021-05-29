@@ -1,1 +1,2 @@
-xclip -o
+#!/bin/sh
+exec xclip -o

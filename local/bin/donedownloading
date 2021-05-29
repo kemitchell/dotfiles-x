@@ -1,5 +1,5 @@
-#!/bin/bash
-while compgen -G "$HOME/downloads/*.crdownload"; do
+#!/bin/sh
+while ls ~/downloads/*.crdownload; do
   sleep 1s
 done
 exit 0

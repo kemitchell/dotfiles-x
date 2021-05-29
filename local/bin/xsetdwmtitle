@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 NZ="$(TZ="Pacific/Auckland" date +"%H:%M") NZ"
 NY="$(TZ="America/New_York" date +"%H:%M") NY"
 DATETIME=$(date --iso-8601=minutes | sed 's!T! !' | sed -r 's/-[0-9]{2}:[0-9]{2}$//')
