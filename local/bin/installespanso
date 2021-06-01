@@ -17,4 +17,19 @@ cd "$tmp"
 
 curl -L https://github.com/federico-terzi/espanso/releases/latest/download/espanso-linux.tar.gz | tar -xz -C ./
 mv espanso "$PREFIX/bin/espanso"
-espanso start
+espanso register
+cat >~/.config/systemd/user/espanso.service <<EOS
+[Unit]
+Description=Espanso
+
+[Service]
+ExecStart=/home/kyle/.local/bin/espanso daemon
+Restart=on-failure
+Environment="DISPLAY=:0"
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+EOS
+systemctl --user daemon-reload
+systemctl --user start espanso
