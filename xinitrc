@@ -5,10 +5,9 @@ while true; do
 	sleep 5s
 done &
 
-export BROWSER=google-chrome
-xscreensaver -no-splash &
+#xscreensaver -no-splash &
 display1080
 setupkeyboard
-numlockx
+#numlockx
 
 exec dwm
