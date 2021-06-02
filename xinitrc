@@ -5,9 +5,7 @@ while true; do
 	sleep 5s
 done &
 
-#xscreensaver -no-splash &
 display1080
 setupkeyboard
-#numlockx
 
 exec dwm
