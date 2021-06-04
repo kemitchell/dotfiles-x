@@ -18,5 +18,5 @@ fi
 
 selection="${1-clipboard}"
 xclip -o -selection "$selection" > "$tmp"
-${VISUAL-${EDITOR-vim}} "$tmp"
+${VISUAL-$EDITOR} "$tmp"
 xclip -i -selection "$selection" < "$tmp"
